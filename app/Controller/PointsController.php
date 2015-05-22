@@ -55,10 +55,10 @@ class PointsController extends AppController {
 			$this->Point->create();
 			$this->request->data['Point']['estado'] = 1;
 			if ($this->Point->save($this->request->data)) {
-				$this->Session->setFlash(__('The point has been saved.'), 'default', array('class' => 'alert alert-success'));
-				return $this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('Los puntos han sido asignados correctamente.'), 'alert', array('class' => 'alert-success'));
+				return $this->redirect(array('controller' => 'sales', 'action' => 'view', $this->request->data['Point']['sale_id']));
 			} else {
-				$this->Session->setFlash(__('The point could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
+				$this->Session->setFlash(__('Los puntos no han sido asignados correctamente. Intente otra vez.'), 'alert', array('class' => 'alert-success'));
 			}
 		}
 		$costumers = $this->Point->Costumer->find('list');
@@ -114,5 +114,16 @@ class PointsController extends AppController {
 			$this->Session->setFlash(__('The point could not be deleted. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
+	}
+
+	public function userpoints($id=null)
+	{
+		$this->Point->Costumer->id = $id;
+		if (!$this->Point->exists()) {
+			throw new NotFoundException(__('El usuario no tiene puntos asignados.'), 'default', array('class' => 'alert alert-warning'));
+		}
+		$ventas = $this->Point->Costumer->find('list', array('conditions' => array('Costumer.id' => $id)));
+		debug($ventas);
+		return $ventas;
 	}
 }

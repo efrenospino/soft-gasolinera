@@ -2,13 +2,12 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1><?php echo __('Costumer'); ?></h1>
+				<h1><?php echo __('Cliente'); ?></h1>
 			</div>
 		</div>
 	</div>
 
 	<div class="row">
-
 		<div class="col-md-3">
 			<div class="actions">
 				<div class="panel panel-default">
@@ -82,7 +81,7 @@
 	</div>
 </div>
 
-<div class="related row">
+<!--<div class="related row">
 	<div class="col-md-12">
 	<h3><?php echo __('Puntos'); ?></h3>
 	<?php if (!empty($costumer['Point'])): ?>
@@ -90,7 +89,7 @@
 	<thead>
 	<tr>
 		<th><?php echo __('Id'); ?></th>
-		<!--<th><?php echo __('Costumer Id'); ?></th>-->
+		<th><?php echo __('Costumer Id'); ?></th>
 		<th><?php echo __('Compra'); ?></th>
 		<th><?php echo __('Valor'); ?></th>
 		<th><?php echo __('Estado'); ?></th>
@@ -101,7 +100,7 @@
 	<?php foreach ($costumer['Point'] as $point): ?>
 		<tr>
 			<td><?php echo $point['id']; ?></td>
-			<!--<td><?php echo $point['costumer_id']; ?></td>-->
+			<td><?php echo $point['costumer_id']; ?></td>
 			<td><?php echo $point['sale_id']; ?></td>
 			<td><?php echo $point['valor']; ?></td>
 			<td><?php echo $point['estado']; ?></td>
@@ -116,11 +115,14 @@
 	</table>
 <?php endif; ?>
 
-	<!--<div class="actions">
+	<div class="actions">
 		<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Point'), array('controller' => 'points', 'action' => 'add'), array('escape' => false, 'class' => 'btn btn-default')); ?> 
-	</div>-->
-	</div><!-- end col md 12 -->
-</div>
+	</div>
+	</div> end col md 12 
+</div>-->
+	<?php 
+		$totalpuntos = array('controller' => 'points', 'action' => 'userspoints', $costumer['Costumer']['id']); ?>
+		<h4><?php echo ('Total puntos: ').$totalpuntos[0]; ?><h4>
 <div class="related row">
 	<div class="col-md-12">
 	<h3><?php echo __('Ventas'); ?></h3>
