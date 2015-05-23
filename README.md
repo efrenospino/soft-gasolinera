@@ -52,9 +52,11 @@ Our primary goal is to provide a structured framework that enables PHP users at 
 ## Información de la aplicación
 
 Para acceder al sitio de prueba
+
 Login: 
 - User: usersoft
 - password: usersoft
+
 Para efectos de clonar o descargar el proyecto, recuerde configurar la base de datos en app/Config/database.php
 
 
