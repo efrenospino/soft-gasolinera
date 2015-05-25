@@ -1,13 +1,6 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<?php echo $this->Html->url('/pages/home-admin'); ?>">Sistema Estación de Servicios</a>
-    </div>
+    
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><?php echo $this->Html->link('Servicios', array('controller' => 'services', 'action' => 'index')); ?></li>
@@ -17,6 +10,7 @@
         <li><?php echo $this->Html->link('Clientes', array('controller' => 'costumers', 'action' => 'index')); ?></li>
         <li><?php echo $this->Html->link('Proveedores', array('controller' => 'providers', 'action' => 'index')); ?></li>
         <li><?php echo $this->Html->link('Ventas', array('controller' => 'sales', 'action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link('Inventario', array('controller' => 'inventarios', 'action' => 'index')); ?></li>
         <li><?php echo $this->Html->link('Puntos', array('controller' => 'points', 'action' => 'index')); ?></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

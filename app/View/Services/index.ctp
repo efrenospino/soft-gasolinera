@@ -30,9 +30,9 @@
 				<thead>
 					<tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
-						<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-						<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
-						<th><?php echo $this->Paginator->sort('precio'); ?></th>
+						<th><?php echo $this->Paginator->sort('name'); ?></th>
+						<th><?php echo $this->Paginator->sort('descripction'); ?></th>
+						<th><?php echo $this->Paginator->sort('price'); ?></th>
 						<th class="actions"></th>
 					</tr>
 				</thead>

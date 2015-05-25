@@ -34,9 +34,9 @@
 				<thead>
 					<tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
-						<th><?php echo $this->Paginator->sort('total'); ?></th>
-						<th><?php echo $this->Paginator->sort('fecha'); ?></th>
-						<th><?php echo $this->Paginator->sort('cliente'); ?></th>
+						<th><?php echo $this->Paginator->sort('totalprice'); ?></th>
+						<th><?php echo $this->Paginator->sort('created'); ?></th>
+						<th><?php echo $this->Paginator->sort('costumer_id'); ?></th>
 						<th class="actions"></th>
 					</tr>
 				</thead>

@@ -33,7 +33,7 @@ class UsersController extends AppController {
     	$this->layout = 'bootstrap';
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-                return $this->redirect($this->Auth->redirectUrl(array('controller' => 'pages', 'action' => 'display', 'home-admin')));
+                return $this->redirect($this->Auth->redirectUrl(array('controller' => 'sales', 'action' => 'index')));
             }
             $this->Session->setFlash(__('Nombre de usuario o contraseña inválido, intente otra vez.'), 'alert', array('class' => 'alert-warning'));
         }

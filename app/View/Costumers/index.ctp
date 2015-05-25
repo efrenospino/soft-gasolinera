@@ -34,8 +34,8 @@
 				<thead>
 					<tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
-						<th><?php echo $this->Paginator->sort('placa del vehículo'); ?></th>
-						<th><?php echo $this->Paginator->sort('fecha de registro'); ?></th>
+						<th><?php echo $this->Paginator->sort('licenseplate'); ?></th>
+						<th><?php echo $this->Paginator->sort('created'); ?></th>
 						<th><?php echo $this->Paginator->sort('cc'); ?></th>
 						<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 						<th><?php echo $this->Paginator->sort('apellido'); ?></th>

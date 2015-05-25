@@ -30,9 +30,9 @@
 				<thead>
 					<tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
-						<th><?php echo $this->Paginator->sort('nombre de usuario'); ?></th>
-						<th><?php echo $this->Paginator->sort('rol'); ?></th>
-						<th><?php echo $this->Paginator->sort('fecha de creación'); ?></th>
+						<th><?php echo $this->Paginator->sort('username'); ?></th>
+						<th><?php echo $this->Paginator->sort('role'); ?></th>
+						<th><?php echo $this->Paginator->sort('created'); ?></th>
 						<th class="actions"></th>
 					</tr>
 				</thead>
