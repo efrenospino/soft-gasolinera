@@ -33,6 +33,10 @@
 				<div class="form-group">
 					<?php echo $this->Form->input('date', array('type' => 'datetime'));?>
 				</div>
+
+				<div class="form-group">
+					<?php echo $this->Form->input('provider_id', array('class' => 'form-control', 'placeholder' => 'Provide_Id'));?>
+				</div>
 			
 				<div class="form-group">
 					<?php echo $this->Form->submit(__('Agregar'), array('class' => 'btn btn-default')); ?>

@@ -15,7 +15,9 @@
         <li><?php echo $this->Html->link('Productos', array('controller' => 'products', 'action' => 'index')); ?></li>
         <li><?php echo $this->Html->link('Compras', array('controller' => 'purchases', 'action' => 'index')); ?></li>
         <li><?php echo $this->Html->link('Clientes', array('controller' => 'costumers', 'action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link('Proveedores', array('controller' => 'providers', 'action' => 'index')); ?></li>
         <li><?php echo $this->Html->link('Ventas', array('controller' => 'sales', 'action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link('Puntos', array('controller' => 'points', 'action' => 'index')); ?></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">

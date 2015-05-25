@@ -41,10 +41,9 @@
         bottom: 0;
         width: 100%;
         /* Set the fixed height of the footer here */
-        height: 60px;
+        height: 80px;
         background-color: black;
       }
-      
     </style>
 
   </head>
@@ -63,7 +62,8 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">SoftGasolinera</span> por <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">IngSoft1</span> se distribuye bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>.
       </div>
     </footer>
 

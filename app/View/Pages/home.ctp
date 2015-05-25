@@ -1,5 +1,5 @@
 <div class="container">
-	<h1>Proyeco de Ingeniería de Software I</h1>
+	<h1>Proyecto de Ingeniería de Software I</h1>
 	<h3>Universidad de la Costa, CUC. 2015<h3>
 	<div class="row">
 		<div class="col-md-6">

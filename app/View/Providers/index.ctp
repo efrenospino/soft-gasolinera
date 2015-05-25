@@ -1,9 +1,9 @@
-<div class="purchases index">
+<div class="providers index">
 
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1><?php echo __('Compras'); ?></h1>
+				<h1><?php echo __('Proovedores'); ?></h1>
 			</div>
 		</div><!-- end col md 12 -->
 	</div><!-- end row -->
@@ -18,8 +18,8 @@
 					<div class="panel-heading">Acciones</div>
 						<div class="panel-body">
 							<ul class="nav nav-pills nav-stacked">
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nueva'), array('action' => 'add'), array('escape' => false)); ?></li>
-							</ul>
+								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nuevo'), array('action' => 'add'), array('escape' => false)); ?></li>
+													</ul>
 						</div><!-- end body -->
 				</div><!-- end panel -->
 			</div><!-- end actions -->
@@ -30,24 +30,21 @@
 				<thead>
 					<tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
-						<th><?php echo $this->Paginator->sort('total'); ?></th>
-						<th><?php echo $this->Paginator->sort('fecha'); ?></th>
-						<th><?php echo $this->Paginator->sort('cliente'); ?></th>
+						<th><?php echo $this->Paginator->sort('razonsocial'); ?></th>
+						<th><?php echo $this->Paginator->sort('created'); ?></th>
+						<th class="actions"></th>
 					</tr>
 				</thead>
 				<tbody>
-				<?php foreach ($purchases as $purchase): ?>
+				<?php foreach ($providers as $provider): ?>
 					<tr>
-						<td><?php echo h($purchase['Purchase']['id']); ?>&nbsp;</td>
-						<td><?php echo h($purchase['Purchase']['totalprice']); ?>&nbsp;</td>
-						<td><?php echo h($purchase['Purchase']['date']); ?>&nbsp;</td>
-						<td>
-			<?php echo $this->Html->link($purchase['Provider']['razonsocial'], array('controller' => 'providers', 'action' => 'view', $purchase['Provider']['id'])); ?>
-						<th class="actions"></th>
+						<td><?php echo h($provider['Provider']['id']); ?>&nbsp;</td>
+						<td><?php echo h($provider['Provider']['razonsocial']); ?>&nbsp;</td>
+						<td><?php echo h($provider['Provider']['created']); ?>&nbsp;</td>
 						<td class="actions">
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'view', $purchase['Purchase']['id']), array('escape' => false)); ?>
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $purchase['Purchase']['id']), array('escape' => false)); ?>
-							<?php echo $this->Form->postLink('<span class="glyphicon glyphicon-remove"></span>', array('action' => 'delete', $purchase['Purchase']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $purchase['Purchase']['id'])); ?>
+							<?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'view', $provider['Provider']['id']), array('escape' => false)); ?>
+							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit"></span>', array('action' => 'edit', $provider['Provider']['id']), array('escape' => false)); ?>
+							<?php echo $this->Form->postLink('<span class="glyphicon glyphicon-remove"></span>', array('action' => 'delete', $provider['Provider']['id']), array('escape' => false), __('¿Esta seguro(a) de eliminar # %s?', $provider['Provider']['id'])); ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>

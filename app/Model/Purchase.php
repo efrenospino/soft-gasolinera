@@ -69,6 +69,16 @@ class Purchase extends AppModel {
 		)
 	);
 
+	public $belongsTo = array(
+		'Provider' => array(
+			'className' => 'Provider',
+			'foreignKey' => 'provider_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
+
 	public function beforeValidate($options = array()) {
 		$specificallyThis = $this->PurchaseDetail->find('list', array(
 			'fields' => array('PurchaseDetail.totalprice'),

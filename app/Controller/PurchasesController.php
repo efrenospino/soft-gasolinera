@@ -62,6 +62,8 @@ class PurchasesController extends AppController {
 				$this->Session->setFlash(__('La compra no pudo ser guardada. Intente otra vez.'), 'alert', array('class' => 'alert-danger'));
 			}
 		}
+		$providers = $this->Purchase->Provider->find('list');
+		$this->set(compact('providers'));
 	}
 
 /**
@@ -86,6 +88,8 @@ class PurchasesController extends AppController {
 			$options = array('conditions' => array('Purchase.' . $this->Purchase->primaryKey => $id));
 			$this->request->data = $this->Purchase->find('first', $options);
 		}
+		$providers = $this->Purchase->Provider->find('list');
+		$this->set(compact('providers'));
 	}
 
 /**

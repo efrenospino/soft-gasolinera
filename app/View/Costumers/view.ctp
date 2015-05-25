@@ -81,7 +81,7 @@
 	</div>
 </div>
 
-<!--<div class="related row">
+<div class="related row">
 	<div class="col-md-12">
 	<h3><?php echo __('Puntos'); ?></h3>
 	<?php if (!empty($costumer['Point'])): ?>
@@ -106,8 +106,6 @@
 			<td><?php echo $point['estado']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-search"></span>'), array('controller' => 'points', 'action' => 'view', $point['id']), array('escape' => false)); ?>
-				<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-edit"></span>'), array('controller' => 'points', 'action' => 'edit', $point['id']), array('escape' => false)); ?>
-				<?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>'), array('controller' => 'points', 'action' => 'delete', $point['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $point['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
@@ -118,11 +116,9 @@
 	<div class="actions">
 		<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Point'), array('controller' => 'points', 'action' => 'add'), array('escape' => false, 'class' => 'btn btn-default')); ?> 
 	</div>
-	</div> end col md 12 
-</div>-->
-	<?php 
-		$totalpuntos = array('controller' => 'points', 'action' => 'userspoints', $costumer['Costumer']['id']); ?>
-		<h4><?php echo ('Total puntos: ').$totalpuntos[0]; ?><h4>
+	</div> <!--end col md 12 -->
+</div>
+
 <div class="related row">
 	<div class="col-md-12">
 	<h3><?php echo __('Ventas'); ?></h3>
@@ -148,8 +144,6 @@
 			<td><?php echo $sale['puntos']; ?></td>-->
 			<td class="actions">
 				<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-search"></span>'), array('controller' => 'sales', 'action' => 'view', $sale['id']), array('escape' => false)); ?>
-				<?php echo $this->Html->link(__('<span class="glyphicon glyphicon-edit"></span>'), array('controller' => 'sales', 'action' => 'edit', $sale['id']), array('escape' => false)); ?>
-				<?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>'), array('controller' => 'sales', 'action' => 'delete', $sale['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $sale['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>

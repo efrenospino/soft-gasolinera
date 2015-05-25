@@ -118,12 +118,13 @@ class PointsController extends AppController {
 
 	public function userpoints($id=null)
 	{
-		$this->Point->Costumer->id = $id;
-		if (!$this->Point->exists()) {
-			throw new NotFoundException(__('El usuario no tiene puntos asignados.'), 'default', array('class' => 'alert alert-warning'));
+		$point = $this->Point->find('all', array('conditions' => array('Point.costumer_id' => $id), 'fields' => 'valor'));
+		$total = 0;
+		for ($i=0; $i < count($point); $i++) { 
+			 $total += ($point[$i]['Point']['valor']);
 		}
-		$ventas = $this->Point->Costumer->find('list', array('conditions' => array('Costumer.id' => $id)));
-		debug($ventas);
-		return $ventas;
+		$this->set('total', $total);
+		return true;
 	}
+
 }

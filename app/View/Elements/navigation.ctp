@@ -12,7 +12,6 @@
           <ul class="nav navbar-nav">
             <li><a href="<?php echo $this->Html->url('/'); ?>">Inicio</a></li>
             <li><a href="<?php echo $this->Html->url('/pages/about'); ?>">Acerca de</a></li>
-            <li><a href="<?php echo $this->Html->url('contact'); ?>">Contacto</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><?php echo $this->Html->link('Login', array('controller' => 'users', 'action' => 'login')); ?>
